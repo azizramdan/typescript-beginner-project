@@ -11,6 +11,11 @@ function printResultUndefined(num: number): undefined {
   return
 }
 
+function addAndHandle(n1: number, n2: number, callback: (num: number) => void) {
+  const result = n1 + n2
+  callback(result)
+}
+
 printResultVoid(add(1, 7))
 
 // let combineValues: Function
@@ -20,3 +25,7 @@ combineValues = add
 // combineValues = printResultVoid
 
 console.log(combineValues(7, 1));
+
+addAndHandle(10, 20, (result) => {
+  console.log(result);
+})
