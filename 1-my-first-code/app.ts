@@ -5,11 +5,13 @@ const person: {
   age: number;
   hobbies: string[];
   role: [Role, string];
+  etc: any;
 } = {
   name: 'Aziz Ramdan Kurniawan',
   age: 24,
   hobbies: ['Eat', 'Cooking'],
   role: [Role.AUTHOR, 'Author'],
+  etc: 'blabla',
 }
 
 console.log(person.role);
