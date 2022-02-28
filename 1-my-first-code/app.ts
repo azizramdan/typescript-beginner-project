@@ -1,21 +1,18 @@
-enum Role {ADMIN = 99, READ_ONLY, AUTHOR}
+function combine(input1: number|string, input2: number|string) {
+  let result
 
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [Role, string];
-  etc: any;
-} = {
-  name: 'Aziz Ramdan Kurniawan',
-  age: 24,
-  hobbies: ['Eat', 'Cooking'],
-  role: [Role.AUTHOR, 'Author'],
-  etc: 'blabla',
+  if (typeof input1 === 'number' && typeof input2 === 'number') {
+    result = input1 + input2
+  } else {
+    result = input1.toString() + input2.toString()
+  }
+
+  return result
 }
 
-console.log(person.role);
+const combineAge = combine(24, 24)
+console.log(combineAge);
 
-for (const hobby of person.hobbies) {
-  console.log(hobby.toUpperCase());
-}
+const combineName = combine('Aziz', 'Rysa')
+console.log(combineName);
+
