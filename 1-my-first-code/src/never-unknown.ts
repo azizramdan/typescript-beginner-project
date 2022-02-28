@@ -3,6 +3,7 @@ let userName: string
 
 userInput = 5
 userInput = 'Aziz'
+userName = 'Rysa'
 
 userInput = userName
 // userName = userInput // error
