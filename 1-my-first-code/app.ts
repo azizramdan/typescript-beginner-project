@@ -12,3 +12,11 @@ function printResultUndefined(num: number): undefined {
 }
 
 printResultVoid(add(1, 7))
+
+// let combineValues: Function
+let combineValues: (a: number, b:number) => number
+
+combineValues = add
+// combineValues = printResultVoid
+
+console.log(combineValues(7, 1));
